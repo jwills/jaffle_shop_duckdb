@@ -1,8 +1,15 @@
 jaffle_shop:
-
-  target: dev
+  target: bv
   outputs:
+    bv:
+      type: bv_duckdb
+      host: localhost
+      port: 5433
+      delegate: dev
+      api_port: 8000
+      database: main
+      schema: analytics
+      threads: 4
     dev:
       type: duckdb
       path: 'jaffle_shop.duckdb'
-      threads: 24
