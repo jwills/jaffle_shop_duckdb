@@ -10,10 +10,10 @@
     "tasks": [
       {
         // The name that shows up in terminal tab
-        "label": "dbt",
+        "label": "buenavista",
         // The task will launch a shell
         "type": "shell",
-        "command": "dbt build",
+        "command": "python3 -m duckdbt.server",
         // Mark as a background task to avoid the spinner animation on the terminal tab
         "isBackground": true,
         "problemMatcher": [],
