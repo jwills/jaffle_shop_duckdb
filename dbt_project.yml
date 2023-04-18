@@ -24,5 +24,6 @@ seeds:
     node_color: '#cd7f32'
 
 models:
+  +start: Jan 1 2020
   jaffle_shop:
     materialized: table
