@@ -25,5 +25,7 @@ seeds:
 
 models:
   +start: Jan 1 2020
+
+snapshots:
   jaffle_shop:
-    materialized: table
+    +target_schema: snapshot_data

@@ -3,5 +3,7 @@ jaffle_shop:
   outputs:
     dev:
       type: duckdb
-      path: jaffle_shop.duckdb
-      threads: 1
+      path: md:test
+      schema: j3
+      threads: 4
+      disable_transactions: true
