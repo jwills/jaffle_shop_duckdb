@@ -1,10 +1,9 @@
 with source as (
 
     {#-
-    Normally we would select from the table here, but we are using seeds to load
-    our data in this project
+    Pulling this from the upstream sqlite source
     #}
-    select * from {{ ref('raw_orders') }}
+    select * from {{ source('upstream', 'raw_orders') }}
 
 ),
 

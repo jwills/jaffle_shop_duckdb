@@ -6,3 +6,14 @@ jaffle_shop:
       type: duckdb
       path: 'jaffle_shop.duckdb'
       threads: 24
+      module_paths:
+        - lib
+      plugins:
+        # Built-in sqlalchemy module for connecting to other DBs as sources (here, a local sqlite file)
+        - module: sqlalchemy
+          config:
+            connection_url: "sqlite:///seeds.sqlite3"
+        # Custom module in the lib directory that defines SQL UDFs written in Python at the start of
+        # the dbt run
+        - module: my_custom_functions
+      

@@ -1,5 +1,22 @@
 version: 2
 
+sources:
+  - name: upstream
+    description: The upstream SQLite database we are reading our source data from using DuckDB's general awesomeness
+    schema: main
+    config:
+      plugin: sqlalchemy
+    tables:
+      - name: raw_customers
+        config:
+          table: raw_customers
+      - name: raw_orders
+        config:
+          table: raw_orders
+      - name: raw_payments
+        config:
+          table: raw_payments
+
 models:
   - name: customers
     description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
