@@ -9,3 +9,7 @@ dbt-core>=1.6.0
 
 # extra features
 sqlfluff~=1.2.1
+
+# plugins
+pandas==2.0.3
+sqlalchemy==2.0.27
