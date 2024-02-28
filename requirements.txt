@@ -96,10 +96,14 @@ msgpack==1.0.6
     # via mashumaro
 networkx==3.1
     # via dbt-core
+numpy==1.24.4
+    # via pandas
 packaging==23.1
     # via
     #   dbt-core
     #   pytest
+pandas==2.0.3
+    # via -r requirements.in
 parsedatetime==2.6
     # via agate
 pathspec==0.11.2
@@ -131,12 +135,15 @@ python-dateutil==2.8.2
     # via
     #   dbt-semantic-interfaces
     #   hologram
+    #   pandas
 python-slugify==8.0.1
     # via agate
 pytimeparse==1.1.8
     # via agate
 pytz==2023.3.post1
-    # via dbt-core
+    # via
+    #   dbt-core
+    #   pandas
 pyyaml==6.0.1
     # via
     #   dbt-core
@@ -156,6 +163,8 @@ six==1.16.0
     #   leather
     #   minimal-snowplow-tracker
     #   python-dateutil
+sqlalchemy==2.0.27
+    # via -r requirements.in
 sqlfluff==1.2.1
     # via -r requirements.in
 sqlparse==0.4.4
@@ -178,7 +187,10 @@ typing-extensions==4.8.0
     #   dbt-semantic-interfaces
     #   mashumaro
     #   pydantic
+    #   sqlalchemy
     #   sqlfluff
+tzdata==2024.1
+    # via pandas
 urllib3==1.26.16
     # via
     #   dbt-core
